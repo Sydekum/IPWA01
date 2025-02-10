@@ -1,0 +1,188 @@
+/* Body: Basis-Layout und Hintergrund */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e8f5e9;
+}
+
+/* Header: obere Kopfzeile */
+header {
+    background-color: #2e7d32;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Header Bild: Logo-Einstellungen */
+header img {
+    max-height: 125px;
+    height: auto;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Hauptnavigation: Menüleiste */
+nav.main-nav {
+    background-color: #388e3c;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Nav-Links: Styling der Menüpunkte */
+nav.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+/* Nav-Links Hover: Effekt beim Überfahren */
+nav.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main: Hauptinhalt-Bereich */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* h1: Haupttitel-Stil */
+main h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #1b5e20;
+}
+
+/* h2: Untertitel ohne unteren Abstand */
+main h2 {
+    margin-bottom: 0;
+}
+
+/* p: Absatzstil im Inhalt */
+main p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #424242;
+}
+
+/* Footer: untere Seitenleiste */
+footer {
+    background-color: #ffffff;
+    color: #1b5e20;
+    text-align: center;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+/* Footer-Links: Link-Styling im Footer */
+footer a {
+    color: #1b5e20;
+    text-decoration: none;
+}
+
+/* Footer-Links Hover: Effekt beim Überfahren */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Tabelle: volle Breite und Zusammenführung der Zellen */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Zellen: Rahmen und Padding */
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Tabellenkopf: Hintergrundfarbe und Cursor */
+th {
+    background-color: #c8e6c9;
+    cursor: pointer;
+}
+
+/* Input: Standard-Eingabefeld-Styling */
+input {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Social Navigation: feste Position für Social-Links */
+nav.social-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 10px;
+    background-color: #388e3c;
+}
+
+/* Social Nav-Links: Styling der Social-Media Links */
+nav.social-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+/* Social Nav-Links Hover: Hover-Effekt */
+nav.social-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Social Nav: linksbündig für Arabisch/Hebräisch */
+html[lang="ar"] nav.social-nav,
+html[lang="he"] nav.social-nav {
+    left: 0;
+    right: auto;
+}
+
+/* Social Nav: rechtsbündig für andere Sprachen */
+html:not([lang="ar"]):not([lang="he"]) nav.social-nav {
+    right: 0;
+    left: auto;
+}
+
+/* Social Nav: bei kleiner Auflösung umplatzieren */
+@media (max-width: 991.98px) {
+    nav.social-nav {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        padding: 5px 0;
+    }
+    /* Social Nav: zentriert für alle Sprachen */
+    html[lang="ar"] nav.social-nav,
+    html[lang="he"] nav.social-nav,
+    html:not([lang="ar"]):not([lang="he"]) nav.social-nav {
+        left: 50%;
+        right: auto;
+    }
+}

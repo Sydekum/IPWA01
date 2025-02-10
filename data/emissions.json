@@ -1,0 +1,808 @@
+[
+  {
+    "kontinent": "Europa",
+    "land": "Deutschland",
+    "emissionen": "800 Mio.",
+    "branche": "Industrie",
+    "unternehmen": "Müller Stahlwerke GmbH"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Frankreich",
+    "emissionen": "670 Mio.",
+    "branche": "Chemie",
+    "unternehmen": "Chemicor SAS"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Spanien",
+    "emissionen": "450 Mio.",
+    "branche": "Energie",
+    "unternehmen": "IberPower SA"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Italien",
+    "emissionen": "520 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Bella Pasta SpA"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Polen",
+    "emissionen": "390 Mio.",
+    "branche": "Bauwesen",
+    "unternehmen": "Pol-Bau Group"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Schweden",
+    "emissionen": "120 Mio.",
+    "branche": "Holzverarbeitung",
+    "unternehmen": "Nordic Timber AB"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Norwegen",
+    "emissionen": "220 Mio.",
+    "branche": "Öl & Gas",
+    "unternehmen": "Scandoil AS"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Niederlande",
+    "emissionen": "310 Mio.",
+    "branche": "Transport",
+    "unternehmen": "Benelux Transport BV"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Türkei",
+    "emissionen": "410 Mio.",
+    "branche": "Automobil",
+    "unternehmen": "Ankara Motors A.Ş."
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Vereinigtes Königreich",
+    "emissionen": "780 Mio.",
+    "branche": "Pharma",
+    "unternehmen": "BritMed Ltd."
+  },
+  {
+    "kontinent": "Asien",
+    "land": "China",
+    "emissionen": "1800 Mio.",
+    "branche": "Elektronik",
+    "unternehmen": "Beijing Tech Corp."
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Japan",
+    "emissionen": "950 Mio.",
+    "branche": "Automobil",
+    "unternehmen": "Nippon Cars Co."
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Indien",
+    "emissionen": "1400 Mio.",
+    "branche": "Energie",
+    "unternehmen": "New Delhi Power Ltd."
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Südkorea",
+    "emissionen": "620 Mio.",
+    "branche": "IT",
+    "unternehmen": "K-Seoul Technologies"
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Saudi-Arabien",
+    "emissionen": "1300 Mio.",
+    "branche": "Öl & Gas",
+    "unternehmen": "Desert Energy Co."
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Indonesien",
+    "emissionen": "730 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "Borneo Palm Group"
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Israel",
+    "emissionen": "190 Mio.",
+    "branche": "Technologie",
+    "unternehmen": "TelAviv Innovations"
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Vereinigte Arabische Emirate",
+    "emissionen": "850 Mio.",
+    "branche": "Bauwesen",
+    "unternehmen": "Dubai Construct LLC"
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Philippinen",
+    "emissionen": "260 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Manila Harvest Corp."
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Thailand",
+    "emissionen": "340 Mio.",
+    "branche": "Chemie",
+    "unternehmen": "Bangkok Chemicals Ltd."
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Südafrika",
+    "emissionen": "420 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "Johannesburg Mining Co."
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Ägypten",
+    "emissionen": "380 Mio.",
+    "branche": "Energie",
+    "unternehmen": "Cairo Power Corp."
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Nigeria",
+    "emissionen": "500 Mio.",
+    "branche": "Öl & Gas",
+    "unternehmen": "Lagos Petroleum Ltd."
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Kenia",
+    "emissionen": "210 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "Nairobi Agro Holdings"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Äthiopien",
+    "emissionen": "160 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Addis Grain Industries"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Marokko",
+    "emissionen": "250 Mio.",
+    "branche": "Chemie",
+    "unternehmen": "Casablanca Chemicals"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Algerien",
+    "emissionen": "310 Mio.",
+    "branche": "Transport",
+    "unternehmen": "Algiers Transit Corp."
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Ghana",
+    "emissionen": "140 Mio.",
+    "branche": "IT",
+    "unternehmen": "Accra Digital Solutions"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Elfenbeinküste",
+    "emissionen": "130 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Abidjan Cocoa Ltd."
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Tansania",
+    "emissionen": "180 Mio.",
+    "branche": "Bauwesen",
+    "unternehmen": "Dar es Salaam Builders"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "USA",
+    "emissionen": "1600 Mio.",
+    "branche": "Industrie",
+    "unternehmen": "American Steel Corp."
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Kanada",
+    "emissionen": "550 Mio.",
+    "branche": "Holzverarbeitung",
+    "unternehmen": "Maple Forest Inc."
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Mexiko",
+    "emissionen": "680 Mio.",
+    "branche": "Automobil",
+    "unternehmen": "AutoMex SA"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Kuba",
+    "emissionen": "90 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Havana Sugar Mills"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Guatemala",
+    "emissionen": "75 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "GuateCoffee Corp."
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Dominikanische Republik",
+    "emissionen": "130 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Caribbean Resorts Co."
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Panama",
+    "emissionen": "110 Mio.",
+    "branche": "Transport",
+    "unternehmen": "Panama Canal Shipping"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Haiti",
+    "emissionen": "60 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Port-au-Prince Rice Mill"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Jamaika",
+    "emissionen": "80 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Kingston Holiday Group"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Costa Rica",
+    "emissionen": "95 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "Tico Fruit Export"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Brasilien",
+    "emissionen": "1200 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "RioAgro SA"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Argentinien",
+    "emissionen": "650 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Buenos Carnes SA"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Chile",
+    "emissionen": "280 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "Andes Copper Corp."
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Kolumbien",
+    "emissionen": "360 Mio.",
+    "branche": "Energie",
+    "unternehmen": "Bogotá Energy Group"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Peru",
+    "emissionen": "220 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Lima Grain Export"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Venezuela",
+    "emissionen": "400 Mio.",
+    "branche": "Öl & Gas",
+    "unternehmen": "Caracas Petro Inc."
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Uruguay",
+    "emissionen": "140 Mio.",
+    "branche": "Transport",
+    "unternehmen": "Montevideo Logistics"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Paraguay",
+    "emissionen": "90 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "Asunción Soy Producers"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Bolivien",
+    "emissionen": "100 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "La Paz Minerals"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Ecuador",
+    "emissionen": "170 Mio.",
+    "branche": "Öl & Gas",
+    "unternehmen": "Quito Energy Enterprises"
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Australien",
+    "emissionen": "530 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "Outback Mining Ltd."
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Neuseeland",
+    "emissionen": "60 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Kiwi Dairy Corp."
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Fidschi",
+    "emissionen": "15 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Fiji Island Holidays"
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Papua-Neuguinea",
+    "emissionen": "70 Mio.",
+    "branche": "Holzverarbeitung",
+    "unternehmen": "PNG Timber Export"
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Samoa",
+    "emissionen": "10 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Apia Coconut Co."
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Tonga",
+    "emissionen": "8 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "Tonga Fruit Export"
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Vanuatu",
+    "emissionen": "6 Mio.",
+    "branche": "Fischerei",
+    "unternehmen": "Port Vila Seafood"
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Salomonen",
+    "emissionen": "5 Mio.",
+    "branche": "Fischerei",
+    "unternehmen": "Honiara Oceanic Corp."
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Mikronesien",
+    "emissionen": "4 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Island Breeze Resorts"
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Kiribati",
+    "emissionen": "3 Mio.",
+    "branche": "Fischerei",
+    "unternehmen": "Tarawa Sea Products"
+  },
+
+  {
+    "kontinent": "Europa",
+    "land": "Finnland",
+    "emissionen": "180 Mio.",
+    "branche": "Holzverarbeitung",
+    "unternehmen": "Suomi Pulp Oy"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Griechenland",
+    "emissionen": "95 Mio.",
+    "branche": "Schiffbau",
+    "unternehmen": "Athena Shipyards"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Portugal",
+    "emissionen": "105 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Lisboa Fish Canners"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Tschechien",
+    "emissionen": "200 Mio.",
+    "branche": "Automobil",
+    "unternehmen": "Bohemia Cars AS"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Rumänien",
+    "emissionen": "150 Mio.",
+    "branche": "Transport",
+    "unternehmen": "Bucharest Logistics SRL"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Ungarn",
+    "emissionen": "140 Mio.",
+    "branche": "Chemie",
+    "unternehmen": "Budapest Chemicals Zrt."
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Bulgarien",
+    "emissionen": "90 Mio.",
+    "branche": "IT",
+    "unternehmen": "Sofia Tech AD"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Irland",
+    "emissionen": "75 Mio.",
+    "branche": "Pharma",
+    "unternehmen": "Green Isle Pharma Ltd."
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Belgien",
+    "emissionen": "190 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Brussels Chocolate NV"
+  },
+  {
+    "kontinent": "Europa",
+    "land": "Schweiz",
+    "emissionen": "65 Mio.",
+    "branche": "Finanzwesen",
+    "unternehmen": "AlpenFin AG"
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Malaysia",
+    "emissionen": "410 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "Kuala Palm Bhd."
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Pakistan",
+    "emissionen": "300 Mio.",
+    "branche": "Textilien",
+    "unternehmen": "Lahore Textile Mills"
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Bangladesch",
+    "emissionen": "280 Mio.",
+    "branche": "Textilien",
+    "unternehmen": "Dhaka Garment Corp."
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Vietnam",
+    "emissionen": "350 Mio.",
+    "branche": "Elektronik",
+    "unternehmen": "Hanoi Circuit Tech"
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Singapur",
+    "emissionen": "110 Mio.",
+    "branche": "Finanzwesen",
+    "unternehmen": "Lion City Capital"
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Katar",
+    "emissionen": "500 Mio.",
+    "branche": "Öl & Gas",
+    "unternehmen": "Doha Petro Group"
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Sri Lanka",
+    "emissionen": "90 Mio.",
+    "branche": "Textilien",
+    "unternehmen": "Ceylon Fabrics Ltd."
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Iran",
+    "emissionen": "600 Mio.",
+    "branche": "Öl & Gas",
+    "unternehmen": "Tehran Energy Corp."
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Nepal",
+    "emissionen": "50 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Himalaya Trek Adventures"
+  },
+  {
+    "kontinent": "Asien",
+    "land": "Kasachstan",
+    "emissionen": "320 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "Astana Mining PLC"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Sudan",
+    "emissionen": "220 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "Khartoum Agro Export"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Sambia",
+    "emissionen": "180 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "Lusaka Copper Mines"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Simbabwe",
+    "emissionen": "130 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "Harare Tobacco Co."
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Uganda",
+    "emissionen": "100 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Kampala Coffee Roasters"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Botswana",
+    "emissionen": "70 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "Gaborone Diamond Co."
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Namibia",
+    "emissionen": "60 Mio.",
+    "branche": "Fischerei",
+    "unternehmen": "Walvis Bay Fisheries"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Senegal",
+    "emissionen": "90 Mio.",
+    "branche": "Transport",
+    "unternehmen": "Dakar Logistics"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Mali",
+    "emissionen": "50 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "Bamako Cotton Export"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "Ruanda",
+    "emissionen": "45 Mio.",
+    "branche": "IT",
+    "unternehmen": "Kigali Software Labs"
+  },
+  {
+    "kontinent": "Afrika",
+    "land": "DR Kongo",
+    "emissionen": "350 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "Kinshasa Minerals"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "El Salvador",
+    "emissionen": "65 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "San Salvador Beans Co."
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Honduras",
+    "emissionen": "70 Mio.",
+    "branche": "Agrar",
+    "unternehmen": "Tegucigalpa Coffee Growers"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Belize",
+    "emissionen": "20 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Barrier Reef Resorts"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Nicaragua",
+    "emissionen": "45 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "Managua Corn Mills"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Barbados",
+    "emissionen": "10 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Bridgetown Getaways"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Trinidad und Tobago",
+    "emissionen": "120 Mio.",
+    "branche": "Öl & Gas",
+    "unternehmen": "Port of Spain Energy"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Bahamas",
+    "emissionen": "15 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Nassau Cruise Lines"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Grenada",
+    "emissionen": "5 Mio.",
+    "branche": "Lebensmittel",
+    "unternehmen": "St. George's Spice Exports"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "St. Lucia",
+    "emissionen": "4 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Castries Island Tours"
+  },
+  {
+    "kontinent": "Nordamerika",
+    "land": "Antigua und Barbuda",
+    "emissionen": "3 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "St. John's Holiday Resorts"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Guyana",
+    "emissionen": "80 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "Georgetown Gold Corp."
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Suriname",
+    "emissionen": "60 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "Paramaribo Bauxite Co."
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Französisch-Guayana",
+    "emissionen": "40 Mio.",
+    "branche": "Raumfahrt",
+    "unternehmen": "Kourou Launch Services"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Trinidad (als Teil Südamerika, fiktiv)",
+    "emissionen": "75 Mio.",
+    "branche": "Chemie",
+    "unternehmen": "TriniChem Holdings"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Falklandinseln",
+    "emissionen": "5 Mio.",
+    "branche": "Fischerei",
+    "unternehmen": "Stanley Fisheries"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Guyana",
+    "emissionen": "30 Mio.",
+    "branche": "Holzverarbeitung",
+    "unternehmen": "Essequibo Timber Inc."
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Chile",
+    "emissionen": "320 Mio.",
+    "branche": "Weinbau",
+    "unternehmen": "Valparaíso Vineyards"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Argentinien",
+    "emissionen": "240 Mio.",
+    "branche": "Finanzwesen",
+    "unternehmen": "La Plata Banking SA"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Kolumbien",
+    "emissionen": "380 Mio.",
+    "branche": "Textilien",
+    "unternehmen": "Medellín Fashion Group"
+  },
+  {
+    "kontinent": "Südamerika",
+    "land": "Peru",
+    "emissionen": "260 Mio.",
+    "branche": "Transport",
+    "unternehmen": "Cusco Cargo SA"
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Guam",
+    "emissionen": "5 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Pacific Island Tours"
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Französisch-Polynesien",
+    "emissionen": "4 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Tahiti Paradise Resorts"
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Neukaledonien",
+    "emissionen": "6 Mio.",
+    "branche": "Bergbau",
+    "unternehmen": "Noumea Nickel Corp."
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Marshallinseln",
+    "emissionen": "3 Mio.",
+    "branche": "Schifffahrt",
+    "unternehmen": "Majuro Shipping Co."
+  },
+  {
+    "kontinent": "Australien/Ozeanien",
+    "land": "Palau",
+    "emissionen": "2 Mio.",
+    "branche": "Tourismus",
+    "unternehmen": "Koror Reef Adventures"
+  }
+]

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CO₂-Watch - Emissionsdaten</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Eigene Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- CSP: Zulassen eigener Ressourcen sowie Bootstrap vom jsdelivr CDN -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data:;">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // JSON-Daten zwischenspeichern, um wiederholte Ladevorgänge zu vermeiden
+            let dataCache = [];
+            // Speichert die Sortierrichtung pro Spalte (true: aufsteigend, false: absteigend)
+            let sortDirections = {};
+            // Mapping: Spaltenindex zu JSON-Schlüssel
+            const sortKeys = ["kontinent", "land", "branche", "unternehmen", "emissionen"];
+            // Cache der Filterfelder, um unnötige DOM-Abfragen zu vermeiden
+            const filterInputs = {
+                kontinent: document.getElementById("filterKontinent"),
+                land: document.getElementById("filterLand"),
+                branche: document.getElementById("filterBranche"),
+                unternehmen: document.getElementById("filterUnternehmen"),
+                emissionen: document.getElementById("filterEmissionen")
+            };
+            // Lade JSON-Daten aus emissions.json und speichere sie im Cache
+            fetch('data/emissions.json')
+                .then(response => response.json())
+                .then(data => {
+                    dataCache = data;
+                    renderTable(getFilteredData());
+                })
+                .catch(error => {
+                    console.error("Fehler beim Laden der Daten:", error);
+                    const tableBody = document.querySelector("#emissionTable tbody");
+                    tableBody.textContent = "Fehler beim Laden der Daten.";
+                });
+
+            /**
+             * Liest die aktiven Filterwerte aus und liefert die gefilterten Datensätze.
+             * Umwandlung in Kleinbuchstaben ermöglicht eine case-insensitive Suche.
+             * Bei den Emissionen erfolgt zusätzlich ein numerischer Vergleich.
+             * @returns {Array} Array der gefilterten Datensätze
+             */
+            function getFilteredData() {
+                const filters = [
+                    filterInputs.kontinent.value.toLowerCase(),
+                    filterInputs.land.value.toLowerCase(),
+                    filterInputs.branche.value.toLowerCase(),
+                    filterInputs.unternehmen.value.toLowerCase(),
+                    filterInputs.emissionen.value
+                ];
+
+                return dataCache.filter(item => {
+                    return (
+                        (!filters[0] || item.kontinent.toLowerCase().includes(filters[0])) &&
+                        (!filters[1] || item.land.toLowerCase().includes(filters[1])) &&
+                        (!filters[2] || item.branche.toLowerCase().includes(filters[2])) &&
+                        (!filters[3] || item.unternehmen.toLowerCase().includes(filters[3])) &&
+                        (!filters[4] || parseFloat(item.emissionen.replace(/[^0-9,.]/g, "").replace(",", ".")) >= parseFloat(filters[4] || 0))
+                    );
+                });
+            }
+
+            /**
+             * Rendert die Tabelle basierend auf den bereitgestellten Daten.
+             * textContent wird verwendet, um zu verhindern, dass HTML interpretiert wird (verhindert XSS).
+             * @param {Array} data - Liste der anzuzeigenden Datensätze.
+             */
+            function renderTable(data) {
+                const tableBody = document.querySelector("#emissionTable tbody");
+                tableBody.textContent = "";  // Vorherige Inhalte löschen
+
+                data.forEach(item => {
+                    const tr = document.createElement("tr");
+                    // Erstelle für jeden relevanten Schlüssel eine Zelle
+                    ["kontinent", "land", "branche", "unternehmen", "emissionen"].forEach(key => {
+                        const td = document.createElement("td");
+                        td.textContent = item[key];  // Setzt nur Textinhalt
+                        tr.appendChild(td);
+                    });
+                    tableBody.appendChild(tr);
+                });
+            }
+
+            // Filtert die Tabelle basierend auf Eingaben und aktualisiert die Anzeige
+            function filterTable() {
+                renderTable(getFilteredData());
+            }
+
+            /**
+             * Sortiert die momentan gefilterten Daten basierend auf der Spalte.
+             * @param {number} index - Index der zu sortierenden Spalte.
+             * @param {boolean} numeric - true, falls numerisch sortiert wird (z. B. bei Emissionen).
+             * @param {boolean} ascending - Sortierrichtung (true: aufsteigend, false: absteigend).
+             */
+            function sortTable(index, numeric = false, ascending = true) {
+                let sortedData = getFilteredData();
+                const key = sortKeys[index];
+                const factor = ascending ? 1 : -1;
+                sortedData.sort((a, b) => {
+                    let valA = a[key];
+                    let valB = b[key];
+
+                    if (numeric || key === "emissionen") {
+                        // Entferne unerwünschte Zeichen und ersetze Komma durch Punkt
+                        valA = parseFloat(valA.replace(/[^0-9,.]/g, "").replace(",", ".")) || 0;
+                        valB = parseFloat(valB.replace(/[^0-9,.]/g, "").replace(",", ".")) || 0;
+                    } else {
+                        // Case-insensitive Vergleich bei Strings
+                        valA = valA.toLowerCase();
+                        valB = valB.toLowerCase();
+                    }
+                    if (valA > valB) return 1 * factor;
+                    if (valA < valB) return -1 * factor;
+                    return 0;
+                });
+                renderTable(sortedData);
+            }
+
+            // Verknüpfe die Filterfelder mit der Filterfunktion, um die Tabelle bei jeder Eingabe zu aktualisieren
+            document.querySelectorAll(".filter-input").forEach(input => {
+                input.addEventListener("input", filterTable);
+            });
+
+            // Füge Klick-Events zu den Tabellenkopfzeilen (erste Zeile) hinzu, um die Sortierung zu ermöglichen
+            document.querySelectorAll("thead tr:first-child th").forEach((th, index) => {
+                th.addEventListener("click", () => {
+                    // Wechsle die Sortierrichtung: Standard ist aufsteigend, danach Toggle
+                    sortDirections[index] = sortDirections[index] === undefined ? true : !sortDirections[index];
+                    sortTable(index, index === 4, sortDirections[index]);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- Header -->
+<header class="container py-3">
+    <div class="d-flex align-items-center">
+        <img src="images/logo.png" alt="Logo" class="me-3">
+        <h1 class="m-0">CO₂-Watch</h1>
+    </div>
+</header>
+
+<!-- Hauptnavigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Navigation umschalten">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Startseite</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Über uns</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="emissiondata.html">Emissionskarte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Social Navigation -->
+<nav class="social-nav">
+    <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.twitter.com" target="_blank" rel="noopener">Twitter</a>
+    <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.co2-watch-website.de" target="_blank" rel="noopener">Website</a>
+</nav>
+
+
+<!-- Hauptinhalt -->
+<main class="container">
+    <h1 class="mb-4">CO₂-Emissionen nach Land</h1>
+    <table id="emissionTable" class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>Kontinent</th>
+            <th>Land</th>
+            <th>Branche</th>
+            <th>Unternehmen</th>
+            <th>Emissionen in Tonnen</th>
+        </tr>
+        <tr>
+            <!-- Filterzeile -->
+            <th>
+                <input type="text" id="filterKontinent" class="form-control filter-input" placeholder="Filter..." pattern="^[a-zA-Z0-9äöüÄÖÜß\s\.,\-_]*$" maxlength="50">
+            </th>
+            <th>
+                <input type="text" id="filterLand" class="form-control filter-input" placeholder="Filter..." pattern="^[a-zA-Z0-9äöüÄÖÜß\s\.,\-_]*$" maxlength="50">
+            </th>
+            <th>
+                <input type="text" id="filterBranche" class="form-control filter-input" placeholder="Filter..." pattern="^[a-zA-Z0-9äöüÄÖÜß\s\.,\-_]*$" maxlength="50">
+            </th>
+            <th>
+                <input type="text" id="filterUnternehmen" class="form-control filter-input" placeholder="Filter..." pattern="^[a-zA-Z0-9äöüÄÖÜß\s\.,\-_]*$" maxlength="50">
+            </th>
+            <th>
+                <input type="number" id="filterEmissionen" class="form-control filter-input" placeholder="Min. Emissionen">
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="5">Daten werden geladen...</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-3">
+    <div class="container">
+        <p>&copy; 2025 CO₂-Watch | <a href="imprint.html">Impressum</a> | <a href="datasecurity.html">Datenschutz</a></p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS Bundle (inklusive Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
