@@ -18,5 +18,4 @@ Diese Webanwendung zeigt CO2-Emissionsdaten von Unternehmen aus versch. Branchen
 - CSS
 - JavaScript
 - JSON
-- GitHub als Repository
-
+- Git
